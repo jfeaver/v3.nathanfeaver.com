@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %></title>
+    <link rel="stylesheet" href="/stylesheet.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+  </head>
+  <body>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <h2>More stuff online</h2>
+      <ul>
+        <li><a href="https://github.com/jfeaver">GitHub</a></li>
+        <li><a href="https://ca.linkedin.com/public-profile/in/nathan-feaver-51037137">LinkedIn</a></li>
+      </ul>
+      <h2>Previous Websites</h2>
+      <ul>
+        <li><a href="https://v2.nathanfeaver.com">Version 2, circa 2014</a></li>
+        <li><a href="https://v1.nathanfeaver.com">Version 1, circa 2011</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
