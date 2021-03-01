@@ -1,3 +1,10 @@
 nanoc() {
   bundle exec nanoc "$@"
 }
+
+deploy() {
+  rm~
+  nanoc
+  nanoc prune --yes
+  aws s3 sync ./output/ s3://www.nathanfeaver.com
+}
